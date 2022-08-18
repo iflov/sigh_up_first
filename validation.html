@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>회원가입 form만들기</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <hr/>
+    <fieldset>
+            <legend>계정정보</legend>
+                <form action="register.html" method="post">
+                    <div>
+                        <label for="idAccount">아이디 : </label>
+                        <input type = "text" id = "idAccount" name = "id" required = "required">
+                        <span class="alert_message" id="account_alert">test</span> <!--원래화면 검증을 위한 validation을 추가하여 사용한다-->
+                    </div>
+                    <div>
+                        <label for="idPassword">비밀번호 : </label>
+                        <input type="password" name="password" id="idPassword" required>
+                        <span class="alert_message">test</span> <!--원래화면 검증을 위한 validation을 추가하여 사용한다-->
+                    </div>
+                    <div>
+                        <label for="idPassword_check">비밀번호 확인 :</label>
+                        <input type="password" name="password_check" id="idPassword_check" required>
+                        <span class="alert_message">test</span> <!--원래화면 검증을 위한 validation을 추가하여 사용한다-->
+                    </div>
+                
+    </fieldset>
+    <fieldset>
+        <legend>프로필</legend>
+            
+                <div>
+                    <label for="idProfile">이름 : </label>
+                    <input type="text" name="profile" id="idProfile">
+                    <span class="alert_message">test</span> <!--원래화면 검증을 위한 validation을 추가하여 사용한다-->
+                </div>
+                <div>
+                    <label for="idBirthday">생년월일 : </label>
+                    <input type="number" name="birthday" id="idBirthday" placeholder="몇년도" min="1900" max="2099" required>
+                    <span class="alert_message">test</span> <!--원래화면 검증을 위한 validation을 추가하여 사용한다-->
+                    <select name="birthday_month" id="idBirthday_month">
+                        <option value="blank">월</option>
+                        
+                    </select>
+                    <span class="alert_message">test</span> <!--원래화면 검증을 위한 validation을 추가하여 사용한다-->
+                    <input type="number" name="birthday_day" id="idBirthday_day" placeholder="몇일" min="1" max="31" required>
+                    <span class="alert_message">test</span> <!--원래화면 검증을 위한 validation을 추가하여 사용한다-->
+                </div>
+                <div>
+                    <label for="idGender">성별 : </label>
+                    <input type="radio" name = "gender" id="idGender_male" value = "male"/>
+                    <label for="idGender_male">남</label>
+                    <span class="alert_message">test</span> <!--원래화면 검증을 위한 validation을 추가하여 사용한다-->
+
+                    <input type="radio" name="gender" id="idGender_Female" value = "female"/>
+                    <label for="idGender_Female">여</label>
+                    <span class="alert_message">test</span> <!--원래화면 검증을 위한 validation을 추가하여 사용한다-->
+                </div>
+            </fieldset>
+                <div>
+                   
+                    <input type="checkbox" name = "agree" id = "idAgree">
+                    <label for="idAgree">약관동의 체크 해주세요</label>
+                    <span class="alert_message">test</span> <!--원래화면 검증을 위한 validation을 추가하여 사용한다-->
+                </div>
+                <input type="submit" value="가입완료"/>
+                <span class="alert_message">test</span> <!--원래화면 검증을 위한 validation을 추가하여 사용한다-->
+    </form>
+    <script src="./script/validation.js"></script>
+</body>
+</html>
